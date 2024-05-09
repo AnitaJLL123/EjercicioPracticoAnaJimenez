@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Automatizacion de prueba Mobiles" tests="3" skipped="0" failures="0" errors="0" timestamp="2024-05-09T03:20:10" hostname="AEC-2K603F3" time="242.692">
+  <properties/>
+  <testcase name="T-E2E- Ingresar al login y realizar logout" classname="Automatizacion de prueba Mobiles" time="86.375"/>
+  <testcase name="T-E2E- Ingresar al link DemoFog" classname="Automatizacion de prueba Mobiles" time="82.142"/>
+  <testcase name="T-E2E- Ingresar al ClipBoard Demo" classname="Automatizacion de prueba Mobiles" time="74.175"/>
+  <system-out><![CDATA[2024-05-08 22:20:10:658 INFO  [Test worker] net.thucydides.model.logging.ConsoleLoggingListener.testStarted(ConsoleLoggingListener.java:146) - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+T-E2E- Ingresar al login y realizar logout(automatizacion-de-prueba-mobiles;t-e2e--ingresar-al-login-y-realizar-logout)
+--------------------------------------------------------------------------------
+2024-05-08 22:21:36:834 INFO  [Test worker] net.thucydides.model.logging.ConsoleLoggingListener.logSuccess(ConsoleLoggingListener.java:287) - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+T-E2E- Ingresar al login y realizar logout
+----------------------------------------------------------------------
+2024-05-08 22:21:36:860 INFO  [Test worker] net.thucydides.model.logging.ConsoleLoggingListener.testStarted(ConsoleLoggingListener.java:146) - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+T-E2E- Ingresar al link DemoFog(automatizacion-de-prueba-mobiles;t-e2e--ingresar-al-link-demofog)
+--------------------------------------------------------------------------------
+2024-05-08 22:22:58:287 INFO  [Test worker] net.thucydides.model.logging.ConsoleLoggingListener.logSuccess(ConsoleLoggingListener.java:287) - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+T-E2E- Ingresar al link DemoFog
+----------------------------------------------------------------------
+2024-05-08 22:22:59:02 INFO  [Test worker] net.thucydides.model.logging.ConsoleLoggingListener.testStarted(ConsoleLoggingListener.java:146) - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+T-E2E- Ingresar al ClipBoard Demo(automatizacion-de-prueba-mobiles;t-e2e--ingresar-al-clipboard-demo)
+--------------------------------------------------------------------------------
+2024-05-08 22:24:13:150 INFO  [Test worker] net.thucydides.model.logging.ConsoleLoggingListener.logSuccess(ConsoleLoggingListener.java:287) - 
+  _____   ___   ___   _____     ___     _     ___   ___   ___   ___  
+ |_   _| | __| / __| |_   _|   | _ \   /_\   / __| / __| | __| |   \ 
+   | |   | _|  \__ \   | |     |  _/  / _ \  \__ \ \__ \ | _|  | |) |
+   |_|   |___| |___/   |_|     |_|   /_/ \_\ |___/ |___/ |___| |___/ 
+
+T-E2E- Ingresar al ClipBoard Demo
+----------------------------------------------------------------------
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

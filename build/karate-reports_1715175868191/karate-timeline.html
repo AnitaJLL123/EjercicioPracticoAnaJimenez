@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-1","id":1},{"content":"pool-1-thread-2","id":2},{"content":"pool-1-thread-3","id":3},{"content":"pool-1-thread-4","id":4}];
+var items = [{"id":1,"group":1,"content":"src\/test\/resources\/features\/apis\/PetStoreAPI[1.1:23]","start":1715175680131,"end":1715175681397,"title":"src\/test\/resources\/features\/apis\/PetStoreAPI[1.1:23] 08:41:20.131-08:41:21.397 T-API - Adicionar una mascota"},{"id":2,"group":2,"content":"src\/test\/resources\/features\/apis\/PetStoreAPI[2.1:38]","start":1715175680207,"end":1715175681820,"title":"src\/test\/resources\/features\/apis\/PetStoreAPI[2.1:38] 08:41:20.207-08:41:21.820 T-API - Consultar la mascota adicionada","className":"failed"},{"id":3,"group":3,"content":"src\/test\/resources\/features\/apis\/PetStoreAPI[3.1:57]","start":1715175680218,"end":1715175681397,"title":"src\/test\/resources\/features\/apis\/PetStoreAPI[3.1:57] 08:41:20.218-08:41:21.397 T-API - Modificar el nombre de la mascota adicionada"},{"id":4,"group":4,"content":"src\/test\/resources\/features\/apis\/PetStoreAPI[4:60]","start":1715175680220,"end":1715175681666,"title":"src\/test\/resources\/features\/apis\/PetStoreAPI[4:60] 08:41:20.220-08:41:21.666 T-API - Eliminar la mascota adicionada"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

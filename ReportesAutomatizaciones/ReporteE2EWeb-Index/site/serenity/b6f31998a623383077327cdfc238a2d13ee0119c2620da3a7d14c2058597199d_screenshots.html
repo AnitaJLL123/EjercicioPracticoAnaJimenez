@@ -1,0 +1,311 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0.min.js"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">erenityBDD</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="3673af38a86401278ef144913725b070a33c337c45519c588dc35cfe13177675.html">Validar Que La Aplicacion Demoblaze Cumpla Con Los Casos De Pruebas Definidos En La HU</a></span>
+                > <span class="truncate-60"><a
+                    href="b6f31998a623383077327cdfc238a2d13ee0119c2620da3a7d14c2058597199d.html">T-E2E - Validar funcionalidad de agregar, eliminar de carrito de compras un producto y realizar Log Out. </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="bi bi-chat-text"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 08-05-2024 21:29</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Validar Que La Aplicacion Demoblaze Cumpla Con Los Casos De Pruebas Definidos En La HU </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="34658a1663fcf042bd7acb3325affbe4e647c8acd84d0228be2f52e1381e61b9.html">10 To 30 Seconds
+                                        (Duration)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="109358d6857655e3b0813b3039fd4307e3b17f3754190bffaec4573fd178a2ab.html">3
+                                        (id)
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="c72c1b34fa91f76429a6d6f122aaf41745b4c337be0948ccd384b61c91a3cdf2.html">Ca04 Ca05 Ca06 Ca07 Ca08 Ca09
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="0b9a55ecf7196c32ce3d9f24d969ffba372c0fcb4bd22977302e4420d68117f5.html">Demoblaze
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="cc39b2b9d73c9b7b0e92f1579e81b9901cb209c1785ef1556e3c6685cc04eec0.html">Agregar Eliminar Un Producto Carrito Compras
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">T-E2E - Validar funcionalidad de agregar, eliminar de carrito de compras un producto y realizar Log Out.
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given que el cliente ingresa a la pagina Demoblaze con sus credenciales "&lt;username&gt;","&lt;password&gt;" consulta una categoria "&lt;categoria&gt;" y selecciona un producto "&lt;producto&gt;"<br>When el selecciona un producto y agrega el carrito de compras, eliminamos el producto seleccionado "&lt;producto&gt;"<br>Then realizamos un Log Out y regresamos a la pagina principal</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="a2a36f295eb61f7d07f5986eb1ffbdbdf5c3457d1735cec4d103825bd55b6581.png" title=" 1: T-E2E - Validar funcionalidad de agregar, eliminar de carrito de compras un producto y realizar Log Out. ({username=anitaj1234, password=test1234, categoria=Phones, producto=Samsung galaxy s6})" width="0"/>
+                <img src="a2a36f295eb61f7d07f5986eb1ffbdbdf5c3457d1735cec4d103825bd55b6581.png" title=" Given que el cliente ingresa a la pagina Demoblaze con sus credenciales &quot;anitaj1234&quot;,&quot;test1234&quot; consulta una categoria &quot;Phones&quot; y selecciona un producto &quot;Samsung galaxy s6&quot;" width="0"/>
+                <img src="a2a36f295eb61f7d07f5986eb1ffbdbdf5c3457d1735cec4d103825bd55b6581.png" title=" cliente navega a la pagina" width="0"/>
+                <img src="a2a36f295eb61f7d07f5986eb1ffbdbdf5c3457d1735cec4d103825bd55b6581.png" title=" cliente opens the Page sign up ui" width="0"/>
+                <img src="cadf0626f4e69e7669453a8c08100fd5fa238d0bef74bf2b70ae3128048be163.png" title=" cliente opens the Page sign up ui (completed)" width="0"/>
+                <img src="cadf0626f4e69e7669453a8c08100fd5fa238d0bef74bf2b70ae3128048be163.png" title=" cliente navega a la pagina (completed)" width="0"/>
+                <img src="cadf0626f4e69e7669453a8c08100fd5fa238d0bef74bf2b70ae3128048be163.png" title=" cliente iniciar sesion" width="0"/>
+                <img src="cadf0626f4e69e7669453a8c08100fd5fa238d0bef74bf2b70ae3128048be163.png" title=" cliente clicks on Label Log in" width="0"/>
+                <img src="d56dfb01f57585eff9f5acc5afd22dd85c26482af5d05e6ade27d327121bd1dd.png" title=" cliente clicks on Label Log in (completed)" width="0"/>
+                <img src="d56dfb01f57585eff9f5acc5afd22dd85c26482af5d05e6ade27d327121bd1dd.png" title=" cliente enters 'anitaj1234' into Campo username" width="0"/>
+                <img src="27319955c96f0ab8d5fb7b64dc00bd99d9f9b52b2f54571550ae99cdb89da76a.png" title=" cliente enters 'anitaj1234' into Campo username (completed)" width="0"/>
+                <img src="27319955c96f0ab8d5fb7b64dc00bd99d9f9b52b2f54571550ae99cdb89da76a.png" title=" cliente enters 'test1234' into Campo password" width="0"/>
+                <img src="a321ad56aa4f1a7c7adffdb3e019b84740161c83a2eb3a7c1e875050b7bf6061.png" title=" cliente enters 'test1234' into Campo password (completed)" width="0"/>
+                <img src="a321ad56aa4f1a7c7adffdb3e019b84740161c83a2eb3a7c1e875050b7bf6061.png" title=" cliente clicks on Boton Log in" width="0"/>
+                <img src="71f46190c8d4f2357e5d078a5317a0d25ccc9c5b1f14c973c933f121c00fc130.png" title=" cliente clicks on Boton Log in (completed)" width="0"/>
+                <img src="71f46190c8d4f2357e5d078a5317a0d25ccc9c5b1f14c973c933f121c00fc130.png" title=" cliente iniciar sesion (completed)" width="0"/>
+                <img src="71f46190c8d4f2357e5d078a5317a0d25ccc9c5b1f14c973c933f121c00fc130.png" title=" cliente Seleccionar y agregar producto" width="0"/>
+                <img src="df3177ce2e1aeaf8c5ccece3af73b06544c973ba9b0e4b5f36daa73fec57a213.png" title=" cliente clicks on Campo de categoria de producto" width="0"/>
+                <img src="8f7b15e0fc14e1f9b8869dea7490009a227d539e1e5a6bb0bcabe2efa53a2623.png" title=" cliente clicks on Campo de categoria de producto (completed)" width="0"/>
+                <img src="8f7b15e0fc14e1f9b8869dea7490009a227d539e1e5a6bb0bcabe2efa53a2623.png" title=" cliente should see Campo de categoria de producto with text value that contains: &lt;[Phones]&gt;" width="0"/>
+                <img src="fb1140c2914cfef5b456021b48d86da189aac01375d5fa36af8d6f43e24577e7.png" title=" cliente should see Campo de categoria de producto with text value that contains: &lt;[Phones]&gt; (completed)" width="0"/>
+                <img src="fb1140c2914cfef5b456021b48d86da189aac01375d5fa36af8d6f43e24577e7.png" title=" cliente clicks on Campo de producto" width="0"/>
+                <img src="50c830277614f5ab25d78e4e8912febb0996813fd0edefe668510b4e2ce2f0a8.png" title=" cliente clicks on Campo de producto (completed)" width="0"/>
+                <img src="50c830277614f5ab25d78e4e8912febb0996813fd0edefe668510b4e2ce2f0a8.png" title=" cliente should see Campo de producto with text value that contains: &lt;[Samsung galaxy s6]&gt;" width="0"/>
+                <img src="7d2559cacfa5bc41d5264dd79e7d27437da21b55ae7a05a56f6a89bbfc71104b.png" title=" cliente should see Campo de producto with text value that contains: &lt;[Samsung galaxy s6]&gt; (completed)" width="0"/>
+                <img src="7d2559cacfa5bc41d5264dd79e7d27437da21b55ae7a05a56f6a89bbfc71104b.png" title=" cliente should see Campo de producto descripcion with text value that contains: &lt;[Product description]&gt;" width="0"/>
+                <img src="7d2559cacfa5bc41d5264dd79e7d27437da21b55ae7a05a56f6a89bbfc71104b.png" title=" cliente clicks on Bot&oacute;n add to cart" width="0"/>
+                <img src="1128de4040d0cdb7df16d95697417f6e1d879619a39d569f71f1f97ec2b3b36e.png" title=" cliente clicks on Bot&oacute;n add to cart (completed)" width="0"/>
+                <img src="1128de4040d0cdb7df16d95697417f6e1d879619a39d569f71f1f97ec2b3b36e.png" title=" cliente Seleccionar y agregar producto (completed)" width="0"/>
+                <img src="1128de4040d0cdb7df16d95697417f6e1d879619a39d569f71f1f97ec2b3b36e.png" title=" Given que el cliente ingresa a la pagina Demoblaze con sus credenciales &quot;anitaj1234&quot;,&quot;test1234&quot; consulta una categoria &quot;Phones&quot; y selecciona un producto &quot;Samsung galaxy s6&quot; (completed)" width="0"/>
+                <img src="1128de4040d0cdb7df16d95697417f6e1d879619a39d569f71f1f97ec2b3b36e.png" title=" When el selecciona un producto y agrega el carrito de compras, eliminamos el producto seleccionado &quot;Samsung galaxy s6&quot;" width="0"/>
+                <img src="1128de4040d0cdb7df16d95697417f6e1d879619a39d569f71f1f97ec2b3b36e.png" title=" cliente Eliminar producto" width="0"/>
+                <img src="3887b1ffabb1b83251fbacb610a599e19221aedcdbfd89bb1e47c4f748689f0e.png" title=" cliente clicks on Menu Cart" width="0"/>
+                <img src="385b622b80d4128765e22d8a3f3072c5fb3d6dbb8b34cc6a37ac9a099ca97e47.png" title=" cliente clicks on Menu Cart (completed)" width="0"/>
+                <img src="385b622b80d4128765e22d8a3f3072c5fb3d6dbb8b34cc6a37ac9a099ca97e47.png" title=" cliente should see Menu Cart with text value that contains: &lt;[Samsung galaxy s6]&gt;" width="0"/>
+                <img src="c3b037669c97173d2cc294cbe9ed913f19307b0ac4397504a35a05512e723009.png" title=" cliente should see Menu Cart with text value that contains: &lt;[Samsung galaxy s6]&gt; (completed)" width="0"/>
+                <img src="c3b037669c97173d2cc294cbe9ed913f19307b0ac4397504a35a05512e723009.png" title=" cliente clicks on Label delete" width="0"/>
+                <img src="e15d0562021244dc0ab918719c6b2a11d2dc7d278c4a3758db6640cd869eb1df.png" title=" cliente clicks on Label delete (completed)" width="0"/>
+                <img src="e15d0562021244dc0ab918719c6b2a11d2dc7d278c4a3758db6640cd869eb1df.png" title=" cliente Eliminar producto (completed)" width="0"/>
+                <img src="e15d0562021244dc0ab918719c6b2a11d2dc7d278c4a3758db6640cd869eb1df.png" title=" When el selecciona un producto y agrega el carrito de compras, eliminamos el producto seleccionado &quot;Samsung galaxy s6&quot; (completed)" width="0"/>
+                <img src="e15d0562021244dc0ab918719c6b2a11d2dc7d278c4a3758db6640cd869eb1df.png" title=" Then realizamos un Log Out y regresamos a la pagina principal" width="0"/>
+                <img src="e15d0562021244dc0ab918719c6b2a11d2dc7d278c4a3758db6640cd869eb1df.png" title=" cliente Seleccionar y agregar producto" width="0"/>
+                <img src="e15d0562021244dc0ab918719c6b2a11d2dc7d278c4a3758db6640cd869eb1df.png" title=" cliente clicks on Boton Logout" width="0"/>
+                <img src="cadf0626f4e69e7669453a8c08100fd5fa238d0bef74bf2b70ae3128048be163.png" title=" cliente clicks on Boton Logout (completed)" width="0"/>
+                <img src="cadf0626f4e69e7669453a8c08100fd5fa238d0bef74bf2b70ae3128048be163.png" title=" cliente Seleccionar y agregar producto (completed)" width="0"/>
+                <img src="cadf0626f4e69e7669453a8c08100fd5fa238d0bef74bf2b70ae3128048be163.png" title=" cliente should see Mensaje with text value that contains: &lt;[PRODUCT STORE]&gt;" width="0"/>
+                <img src="895afd1e8e7fd2949bff62d8158663e10a1161fcb218b251a44baee9e4fe638f.png" title=" cliente should see Mensaje with text value that contains: &lt;[PRODUCT STORE]&gt; (completed)" width="0"/>
+                <img src="895afd1e8e7fd2949bff62d8158663e10a1161fcb218b251a44baee9e4fe638f.png" title=" Then realizamos un Log Out y regresamos a la pagina principal (completed)" width="0"/>
+
+                <img src="895afd1e8e7fd2949bff62d8158663e10a1161fcb218b251a44baee9e4fe638f.png" title=" 1: T-E2E - Validar funcionalidad de agregar, eliminar de carrito de compras un producto y realizar Log Out. ({username=anitaj1234, password=test1234, categoria=Phones, producto=Samsung galaxy s6}) (completed): <span class='success-color'>SUCCESS</span>" width="0"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 4.0.27</span>
+</div>
+</body>
+</html>
